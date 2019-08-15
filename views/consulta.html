@@ -8,10 +8,21 @@
 </head>
 <body>
     <center><h1>Pagina de conversion de moneda por fecha</h1></center>
-    <center><h3 name="txtRespuesta" id="txtRespuesta"></h></center>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h1 id="hola"></h1>
+                <label for="formGroupExampleInput" name="txtRespuesta" id="txtRespuesta">El tipo de cambio de ese día es de un dolar a <%= title %> pesos.</label>
+                <br>
+                <input type="submit" onclick="window.location.href='http://localhost:3000/';" class="btn btn-primary btn-lg" id="btnReturn" value="Nueva consulta"></input>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript">
         var _txtRespuesta = document.getElementById('txtRespuesta');
-        _txtRespuesta.value = ;
+        if(_txtRespuesta.textContent === "El tipo de cambio de ese día es de un dolar a ¿? pesos."){
+            alert("El cambio de dolar a peso no se encuentra en esa fecha");
+        }
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
